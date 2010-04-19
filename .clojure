@@ -1,0 +1,6 @@
+lib/activation.jar
+lib/clojure-1.1.0.jar
+lib/clojure-contrib-1.1.0.jar
+lib/mailapi.jar
+lib/smtp.jar
+src

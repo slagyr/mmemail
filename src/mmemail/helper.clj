@@ -16,9 +16,9 @@
     props))
 
 (defn validate-session-params [params]
-  (if (nil? (:host params)) (throw (Exception. "Missing :host")))
-  (if (nil? (:port params)) (throw (Exception. "Missing :port")))
-  (if (nil? (:user params)) (throw (Exception. "Missing :user"))))
+  (if (nil? (:host params)) (throw (Exception. ":host must be provided")))
+  (if (nil? (:port params)) (throw (Exception. ":port must be provided")))
+  (if (nil? (:user params)) (throw (Exception. ":user must be provided"))))
 
 (defn create-authenticator [username password]
   (proxy [javax.mail.Authenticator] []
@@ -38,9 +38,14 @@
         (.addRecipients message recipient-type (javax.mail.internet.InternetAddress/parse recipient)))
       (add-recipients message recipient-type (list recipients)))))
 
+(defn validate-email-params [params]
+  (if (nil? (:text params)) (throw (Exception. ":text must be provided")))
+  (if (every? #(nil? (%1 params)) [:to :cc :bcc]) (throw (Exception. "At least 1 recipient must be provided (:to, :cc, or :bcc)"))))
+
 (defn create-message [session details]
+  (validate-email-params details)
   (let [message (javax.mail.internet.MimeMessage. session)]
-    (.setFrom message (javax.mail.internet.InternetAddress. (:from details)))
+    (.setFrom message (javax.mail.internet.InternetAddress. (or (:from details) (:user details))))
     (add-recipients message (javax.mail.Message$RecipientType/TO) (:to details))
     (add-recipients message (javax.mail.Message$RecipientType/CC) (:cc details))
     (add-recipients message (javax.mail.Message$RecipientType/BCC) (:bcc details))

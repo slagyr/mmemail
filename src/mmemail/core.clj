@@ -9,5 +9,5 @@
 (defn create-mailer [params]
   (let [session (create-session params)]
     (fn [details]
-      (deliver-message (create-message session details)))))
+      (deliver-message (create-message session (merge params details))))))
 

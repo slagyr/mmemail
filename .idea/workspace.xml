@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="84515300-8e23-4e57-97dd-c7df2feb1a18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mmemail.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/smtp.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activation.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mmemail/helper.clj" afterPath="$PROJECT_DIR$/src/mmemail/helper.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mmemail/core.clj" afterPath="$PROJECT_DIR$/src/mmemail/core.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mmemail/helper.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mmemail/helper_test.clj" afterPath="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mmemail/core_test.clj" afterPath="$PROJECT_DIR$/test/mmemail/core_test.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mailapi.jar" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="mmemail.iws" />
@@ -91,16 +87,16 @@
       <file leaf-file-name="core.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mmemail/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+            <state line="11" column="69" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core_test.clj" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="core_test.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="101" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.58870965">
               <folding />
             </state>
           </provider>
@@ -109,16 +105,25 @@
       <file leaf-file-name="helper_test.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/mmemail/helper_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="75" selection-start="4387" selection-end="4387" vertical-scroll-proportion="0.0">
+            <state line="92" column="35" selection-start="5051" selection-end="5051" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.clj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="helper.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mmemail/helper.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="57" selection-start="829" selection-end="829" vertical-scroll-proportion="0.10483871">
+            <state line="47" column="0" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".clojure" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.clojure">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="3" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,11 +159,12 @@
       <list>
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/test/mmemail/core_test.clj" />
         <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/src/mmemail/core.clj" />
-        <option value="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
+        <option value="$PROJECT_DIR$/.clojure" />
         <option value="$PROJECT_DIR$/src/mmemail/helper.clj" />
+        <option value="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
+        <option value="$PROJECT_DIR$/src/mmemail/core.clj" />
+        <option value="$PROJECT_DIR$/test/mmemail/core_test.clj" />
       </list>
     </option>
   </component>
@@ -661,30 +667,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mmemail/core.clj">
+    <entry file="file://$PROJECT_DIR$/.clojure">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="101" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+        <state line="5" column="3" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/mmemail/helper_test.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="75" selection-start="4387" selection-end="4387" vertical-scroll-proportion="0.0">
+        <state line="92" column="35" selection-start="5051" selection-end="5051" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mmemail/helper.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="57" selection-start="829" selection-end="829" vertical-scroll-proportion="0.10483871">
+        <state line="47" column="0" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mmemail/core.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="69" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.58870965">
           <folding />
         </state>
       </provider>

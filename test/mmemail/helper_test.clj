@@ -74,8 +74,20 @@
       (is (= error (.getMessage e))))))
 
 (deftest should-raise-error-with-insufficient-session-params
-  (check-invalid-session-params {:port "1234" :user "Wiley"} "Missing :host")
-  (check-invalid-session-params {:host "acme.com" :user "Wiley"} "Missing :port")
-  (check-invalid-session-params {:host "acme.com" :port "1234" } "Missing :user"))
+  (check-invalid-session-params {:port "1234" :user "Wiley"} ":host must be provided")
+  (check-invalid-session-params {:host "acme.com" :user "Wiley"} ":port must be provided")
+  (check-invalid-session-params {:host "acme.com" :port "1234"} ":user must be provided"))
+
+(defn check-invalid-email-params [session params error]
+  (try
+    (create-message session, params)
+    (is false (format "Message params should not have validated: %s" error))
+    (catch Exception e
+      (is (= error (.getMessage e))))))
+
+(deftest should-raise-error-with-insufficient-email-params
+  (let [session (create-session {:host "acme.com" :port "1234" :user "Wiley"})]
+    (check-invalid-email-params session {:to "joe@acme.com"} ":text must be provided")
+    (check-invalid-email-params session {:text "joe@acme.com"} "At least 1 recipient must be provided (:to, :cc, or :bcc)")))
 
 (clojure.contrib.test-is/run-tests)
