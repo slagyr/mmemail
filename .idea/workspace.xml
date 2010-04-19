@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="84515300-8e23-4e57-97dd-c7df2feb1a18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/smtp.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mailapi.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Mmemail.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/smtp.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activation.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/mmemail/core_test.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mmemail/core.clj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mmemail/core.clj" afterPath="$PROJECT_DIR$/src/mmemail/core.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mmemail/helper.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mmemail/core_test.clj" afterPath="$PROJECT_DIR$/test/mmemail/core_test.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mailapi.jar" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="mmemail.iws" />
@@ -96,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.clj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="core.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mmemail/core.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="13" selection-start="1630" selection-end="1630" vertical-scroll-proportion="0.8951613">
+            <state line="8" column="31" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,7 +100,25 @@
       <file leaf-file-name="core_test.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="3289" selection-end="3289" vertical-scroll-proportion="0.0">
+            <state line="25" column="101" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helper_test.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/mmemail/helper_test.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="75" selection-start="4387" selection-end="4387" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helper.clj" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mmemail/helper.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="57" selection-start="829" selection-end="829" vertical-scroll-proportion="0.10483871">
               <folding />
             </state>
           </provider>
@@ -117,7 +127,7 @@
       <file leaf-file-name="test.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="43" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="36" column="4" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,10 +153,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/project.clj" />
-        <option value="$PROJECT_DIR$/src/test.java" />
-        <option value="$PROJECT_DIR$/test/mmemail/core_test.clj" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/test/mmemail/core_test.clj" />
+        <option value="$PROJECT_DIR$/src/test.java" />
         <option value="$PROJECT_DIR$/src/mmemail/core.clj" />
+        <option value="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
+        <option value="$PROJECT_DIR$/src/mmemail/helper.clj" />
       </list>
     </option>
   </component>
@@ -296,6 +308,17 @@
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/mmemail" />
+      <setting name="repl" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="helper_test" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="Mmemail" />
+      <setting name="path" value="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/test/mmemail" />
       <setting name="repl" value="false" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -493,9 +516,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Clojure Script.core_test" />
       <item index="1" class="java.lang.String" itemvalue="Clojure Script.core" />
+      <item index="2" class="java.lang.String" itemvalue="Clojure Script.helper_test" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -609,20 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="43" selection-start="923" selection-end="923" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="3289" selection-end="3289" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
@@ -630,9 +640,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mailapi.jar!/javax/mail/Transport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mailapi.jar!/javax/mail/Message.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="4" selection-start="1177" selection-end="1177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mmemail/core.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1630" selection-end="1630" vertical-scroll-proportion="0.8951613">
+        <state line="8" column="31" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mmemail/core_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="101" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mmemail/helper_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="75" selection-start="4387" selection-end="4387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mmemail/helper.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="57" selection-start="829" selection-end="829" vertical-scroll-proportion="0.10483871">
           <folding />
         </state>
       </provider>
