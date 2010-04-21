@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="84515300-8e23-4e57-97dd-c7df2feb1a18" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mmemail/helper.clj" afterPath="$PROJECT_DIR$/src/mmemail/helper.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.rdoc" afterPath="$PROJECT_DIR$/README.rdoc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mmemail/helper_test.clj" afterPath="$PROJECT_DIR$/test/mmemail/helper_test.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/mmemail/core_test.clj" afterPath="$PROJECT_DIR$/test/mmemail/core_test.clj" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="mmemail.iws" />
@@ -109,7 +102,7 @@
       <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="4" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.6024423">
+            <state line="13" column="4" selection-start="205" selection-end="205" vertical-scroll-proportion="0.21166892">
               <folding />
             </state>
           </provider>
@@ -736,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.6024423">
+        <state line="13" column="4" selection-start="205" selection-end="205" vertical-scroll-proportion="0.21166892">
           <folding />
         </state>
       </provider>

@@ -11,7 +11,7 @@ Simple Clojure library for sending email, with just one jar!
 
 === Jar File
 
-    Can be downloaded at <a href="http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar">http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar</a>
+...can be downloaded at <a href="http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar">http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar</a>
 
 == Usage:
 
