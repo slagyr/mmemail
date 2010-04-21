@@ -42,7 +42,7 @@ like so:
 The <code>create-mailer</code> accepts email parameters that will be used as defaults when the generated function is called.
 
     (def my_mailer (create-mailer {:subject "Greetings" :text "Meep Meep!" :host "smtp.gmail.com" :port 465 :ssl true :user "road@gmail.com" :password "runner"}))
-    (my_mailer {:to "joe@acme.com"})
+    (my_mailer {:to "joe@acme.com"}) 
 
 
 == License
