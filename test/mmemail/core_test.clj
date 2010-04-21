@@ -14,7 +14,7 @@
       (f))))
 
 (deftest send-email-with-all-params
-  (send-email {:host "acme.com" :port "1234" :user "Wiley" :to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :text ":)"})
+  (send-email {:host "acme.com" :port "1234" :user "Wiley" :to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :body ":)"})
   (is (not (nil? delivered-message)))
   (is (= "Hiya" (.getSubject delivered-message)))
   (is (= ":)" (.getContent delivered-message)))
@@ -24,12 +24,12 @@
   (is (= [] (map #(.getAddress %1) (.getRecipients delivered-message javax.mail.Message$RecipientType/BCC)))))
 
 (deftest send-email-uses-user-if-from-missing
-  (send-email {:host "acme.com" :port "1234" :user "wiley@acme.com" :to "joe@acme.com" :subject "Hiya" :text ":)"})
+  (send-email {:host "acme.com" :port "1234" :user "wiley@acme.com" :to "joe@acme.com" :subject "Hiya" :body ":)"})
   (is (= ["wiley@acme.com"] (map #(.getAddress %1) (.getFrom delivered-message)))))
 
 (deftest create-mailer-function
   (let [mailer (create-mailer {:host "acme.com" :port "1234" :user "Wiley"})]
-    (mailer {:to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :text ":)"})
+    (mailer {:to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :body ":)"})
     (is (not (nil? delivered-message)))
     (is (= "Hiya" (.getSubject delivered-message)))
     (is (= ":)" (.getContent delivered-message)))
@@ -38,11 +38,11 @@
 
 (deftest create-mailer-function-defaults-from-to-user
   (let [mailer (create-mailer {:host "acme.com" :port "1234" :user "wiley@acme.com"})]
-    (mailer {:to "joe@acme.com" :subject "Hiya" :text ":)"})
+    (mailer {:to "joe@acme.com" :subject "Hiya" :body ":)"})
     (is (= ["wiley@acme.com"] (map #(.getAddress %1) (.getFrom delivered-message))))))
 
 (deftest create-mailer-function-can-store-defaults
-  (let [mailer (create-mailer {:host "acme.com" :port "1234" :user "Wiley" :from "jill@acme.com" :subject "Hiya" :text ":)"})]
+  (let [mailer (create-mailer {:host "acme.com" :port "1234" :user "Wiley" :from "jill@acme.com" :subject "Hiya" :body ":)"})]
     (mailer {:to "joe@acme.com"})
     (is (not (nil? delivered-message)))
     (is (= "Hiya" (.getSubject delivered-message)))

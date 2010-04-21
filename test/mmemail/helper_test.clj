@@ -37,7 +37,7 @@
 
 (deftest should-create-message
   (let [session (sample-session)
-        message (create-message session {:to ["joe@acme.com"] :from "jill@acme.com" :subject "Hiya" :text ":)"})]
+        message (create-message session {:to ["joe@acme.com"] :from "jill@acme.com" :subject "Hiya" :body ":)"})]
     (is (= "Hiya" (.getSubject message)))
     (is (= ":)" (.getContent message)))
     (is (= ["jill@acme.com"] (map #(.getAddress %1) (.getFrom message))))
@@ -47,13 +47,13 @@
 
 (deftest should-create-message-with-string-to
   (let [session (sample-session)
-        message (create-message session {:to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :text ":)"})]
+        message (create-message session {:to "joe@acme.com" :from "jill@acme.com" :subject "Hiya" :body ":)"})]
     (is (= ["joe@acme.com"] (map #(.getAddress %1) (.getRecipients message javax.mail.Message$RecipientType/TO))))))
 
 (deftest should-create-message-with-cc-and-bcc
   (let [session (sample-session)
         message (create-message session {:to ["joe@acme.com"] :cc "bill@acme.com" :bcc "bob@acme.com"
-                                         :from "jill@acme.com" :subject "Hiya" :text ":)"})]
+                                         :from "jill@acme.com" :subject "Hiya" :body ":)"})]
     (is (= "Hiya" (.getSubject message)))
     (is (= ":)" (.getContent message)))
     (is (= ["jill@acme.com"] (map #(.getAddress %1) (.getFrom message))))
@@ -63,7 +63,7 @@
 
 (deftest should-create-message-multiple-recipients
   (let [session (sample-session)
-        message (create-message session {:to ["joe@acme.com" "tom@acme.com"] :from "jill@acme.com" :subject "Hiya" :text ":)"})]
+        message (create-message session {:to ["joe@acme.com" "tom@acme.com"] :from "jill@acme.com" :subject "Hiya" :body ":)"})]
     (is (= ["joe@acme.com" "tom@acme.com"] (map #(.getAddress %1) (.getRecipients message javax.mail.Message$RecipientType/TO))))))
 
 (defn check-invalid-session-params [params error]
@@ -87,7 +87,7 @@
 
 (deftest should-raise-error-with-insufficient-email-params
   (let [session (create-session {:host "acme.com" :port "1234" :user "Wiley"})]
-    (check-invalid-email-params session {:to "joe@acme.com"} ":text must be provided")
-    (check-invalid-email-params session {:text "joe@acme.com"} "At least 1 recipient must be provided (:to, :cc, or :bcc)")))
+    (check-invalid-email-params session {:to "joe@acme.com"} ":body must be provided")
+    (check-invalid-email-params session {:body "joe@acme.com"} "At least 1 recipient must be provided (:to, :cc, or :bcc)")))
 
 (clojure.contrib.test-is/run-tests)

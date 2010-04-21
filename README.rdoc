@@ -1,18 +1,27 @@
 = MM-Email
 
-Simple Clojure library for sending email.
+Simple Clojure library for sending email, with just one jar!  
 
 == Installation
 
+=== Leiningan:
 
+    (defproject your-project "0.0.0"
+      :dependencies [[mmemail "1.0.0"]]
 
-== Usage: The Easy Way
+=== Jar File
+
+    Can be downloaded at <a href="http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar">http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar</a>
+
+== Usage:
+
+=== The Easy Way
 
 <code>mmemail.core</code> is the only include you need.  It contains only 2 methods, the fist being <code>send-email</code>.
 It takes a map that includes all the configuration and email parameters.  That's it.
 
     (use `mmemail.core)
-    (send-email {:host "smtp.gmail.com" :port 465 :ssl true :user "road@gmail.com" :password "runner" :to "joe@acme.com" :subject "Greetings" :text "Meep Meep!"})
+    (send-email {:host "smtp.gmail.com" :port 465 :ssl true :user "road@gmail.com" :password "runner" :to "joe@acme.com" :subject "Greetings" :body "Meep Meep!"})
 
 Most of the parameters are required, but based on your server configuration you might get away without these:
 * :ssl
@@ -26,7 +35,7 @@ It also accepts the following optional parameters:
 
 The recipient parameters (:to, :cc, :bcc) may be a string, for one recipient, or a sequence of strings, for multiple recipients.
 
-== Usage: The Convenient Way
+=== The Convenient Way
 
 It can be annoying to pass such a big map into the function, and typically you'll want to get all the server configuration
 out of the way.  This is where the second function of <code>mmemail.core</code> (<code>create-mailer</code>) comes into play.
@@ -37,11 +46,11 @@ out of the way.  This is where the second function of <code>mmemail.core</code> 
 <code>create-mailer</code> will return a new function with all the configuration baked in. So in the future, you can send email
 like so:
 
-     (my_mailer {:to "joe@acme.com" :subject "Greetings" :text "Meep Meep!"})
+     (my_mailer {:to "joe@acme.com" :subject "Greetings" :body "Meep Meep!"})
 
 The <code>create-mailer</code> accepts email parameters that will be used as defaults when the generated function is called.
 
-    (def my_mailer (create-mailer {:subject "Greetings" :text "Meep Meep!" :host "smtp.gmail.com" :port 465 :ssl true :user "road@gmail.com" :password "runner"}))
+    (def my_mailer (create-mailer {:subject "Greetings" :body "Meep Meep!" :host "smtp.gmail.com" :port 465 :ssl true :user "road@gmail.com" :password "runner"}))
     (my_mailer {:to "joe@acme.com"}) 
 
 

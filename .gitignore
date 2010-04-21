@@ -1,3 +1,7 @@
 lib/*
 out
 src/test.java
+mmemail-standalone.jar
+mmemail.jar
+pom.xml
+tmp/

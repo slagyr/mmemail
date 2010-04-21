@@ -39,7 +39,7 @@
       (add-recipients message recipient-type (list recipients)))))
 
 (defn validate-email-params [params]
-  (if (nil? (:text params)) (throw (Exception. ":text must be provided")))
+  (if (nil? (:body params)) (throw (Exception. ":body must be provided")))
   (if (every? #(nil? (%1 params)) [:to :cc :bcc]) (throw (Exception. "At least 1 recipient must be provided (:to, :cc, or :bcc)"))))
 
 (defn create-message [session details]
@@ -50,7 +50,7 @@
     (add-recipients message (javax.mail.Message$RecipientType/CC) (:cc details))
     (add-recipients message (javax.mail.Message$RecipientType/BCC) (:bcc details))
     (.setSubject message (:subject details))
-    (.setText message (:text details))
+    (.setText message (:body details))
     message))
 
 (defn deliver-message [message]
