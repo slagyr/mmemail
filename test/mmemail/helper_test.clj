@@ -7,7 +7,7 @@
     (is (= "acme.com" (.get props "mail.smtp.host")))
     (is (= "1234" (.get props "mail.smtp.port")))
     (is (= "Wiley" (.get props "mail.smtp.user")))
-    (is (= nil (.get props "mail.smtp.socketFactory.port")))
+    (is (= "1234" (.get props "mail.smtp.socketFactory.port")))
     (is (= "true" (.get props "mail.smtp.auth")))
     (is (= nil (.get props "mail.smtp.starttls.enable")))))
 
@@ -16,7 +16,7 @@
     (is (= "acme.com" (.get props "mail.smtp.host")))
     (is (= "1234" (.get props "mail.smtp.port")))
     (is (= "Wiley" (.get props "mail.smtp.user")))
-    (is (= nil (.get props "mail.smtp.socketFactory.port")))
+    (is (= "1234" (.get props "mail.smtp.socketFactory.port")))
     (is (= "true" (.get props "mail.smtp.auth")))
     (is (= "true" (.get props "mail.smtp.starttls.enable")))))
 
@@ -25,7 +25,7 @@
     (is (= "acme.com" (.get props "mail.smtp.host")))
     (is (= "1234" (.get props "mail.smtp.port")))
     (is (= "Wiley" (.get props "mail.smtp.user")))
-    (is (= nil (.get props "mail.smtp.socketFactory.port")))
+    (is (= "1234" (.get props "mail.smtp.socketFactory.port")))
     (is (= "true" (.get props "mail.smtp.auth")))
     (is (= "true" (.get props "mail.smtp.starttls.enable")))
     (is (= "javax.net.ssl.SSLSocketFactory" (.get props "mail.smtp.socketFactory.class")))
