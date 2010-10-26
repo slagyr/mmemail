@@ -7,14 +7,15 @@ end
 
 task :jar do
   run "lein jar"
+  run "cp lib_safe/*.jar lib/"
   run "mkdir tmp"
   run "cd tmp; jar -x < ../lib/smtp.jar"
   run "cd tmp; jar -x < ../lib/activation.jar"
   run "cd tmp; jar -x < ../lib/mailapi.jar"
   run "cd tmp; jar -x < ../mmemail.jar"
-  run "cat _MANIFEST.MF >> tmp/META-INF/MANIFEST.MF"
+  # run "cat _MANIFEST.MF >> tmp/META-INF/MANIFEST.MF"
   run "jar cfm mmemail.jar tmp/META-INF/MANIFEST.MF -C tmp/ ."
-  run "rm -rf tmp"
+  # run "rm -rf tmp"
 end
 
 task :push => [:jar] do                                               
