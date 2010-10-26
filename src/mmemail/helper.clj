@@ -6,9 +6,10 @@
       (.put "mail.smtp.host" (:host map))
       (.put "mail.smtp.port" (:port map))
       (.put "mail.smtp.user" (:user map))
+      (.put "mail.smtp.socketFactory.port" (:port map))
       (.put "mail.smtp.auth" "true"))
     (if (or (= (:starttls map) true) (= (:starttls map) "true"))
-        (.put props "mail.smtp.starttls.enable" "true"))
+      (.put props "mail.smtp.starttls.enable" "true"))
     (if (or (= (:ssl map) true) (= (:ssl map) "true"))
       (doto props
         (.put "mail.smtp.starttls.enable" "true")
