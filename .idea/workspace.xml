@@ -102,7 +102,7 @@
       <file leaf-file-name="README.rdoc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.rdoc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="97" selection-end="97" vertical-scroll-proportion="-0.27659574">
+            <state line="17" column="42" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2712766">
               <folding />
             </state>
           </provider>
@@ -582,7 +582,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <frame x="0" y="318" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -729,7 +729,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="97" selection-end="97" vertical-scroll-proportion="-0.27659574">
+        <state line="17" column="42" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2712766">
           <folding />
         </state>
       </provider>

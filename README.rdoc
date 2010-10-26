@@ -7,11 +7,11 @@ Simple Clojure library for sending email, with just one jar!
 === Leiningen:
 
     (defproject your-project "0.0.0"
-      :dependencies [[mmemail "1.0.0"]]
+      :dependencies [[mmemail "1.0.1"]]
 
 === Jar File
 
-...can be downloaded at http://clojars.org/repo/mmemail/mmemail/1.0.0/mmemail-1.0.0.jar
+...can be downloaded at http://clojars.org/repo/mmemail/mmemail/1.0.1/mmemail-1.0.1.jar
 
 == Usage:
 
@@ -78,4 +78,4 @@ The <code>create-mailer</code> accepts email parameters that will be used as def
 == License
 
 Copyright 2010 Micah Martin. All Rights Reserved.
-Limelight and all included source files are distributed under terms of the GNU LGPL.
+MMEMail and all included source files are distributed under terms of the GNU LGPL.
