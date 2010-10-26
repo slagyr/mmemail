@@ -7,16 +7,25 @@
     (is (= "acme.com" (.get props "mail.smtp.host")))
     (is (= "1234" (.get props "mail.smtp.port")))
     (is (= "Wiley" (.get props "mail.smtp.user")))
-    (is (= "1234" (.get props "mail.smtp.socketFactory.port")))
+    (is (= nil (.get props "mail.smtp.socketFactory.port")))
     (is (= "true" (.get props "mail.smtp.auth")))
     (is (= nil (.get props "mail.smtp.starttls.enable")))))
+
+(deftest should-build-properties-with-ssl-
+  (let [props (build-properties {:host "acme.com" :port "1234" :user "Wiley" :starttls true})]
+    (is (= "acme.com" (.get props "mail.smtp.host")))
+    (is (= "1234" (.get props "mail.smtp.port")))
+    (is (= "Wiley" (.get props "mail.smtp.user")))
+    (is (= nil (.get props "mail.smtp.socketFactory.port")))
+    (is (= "true" (.get props "mail.smtp.auth")))
+    (is (= "true" (.get props "mail.smtp.starttls.enable")))))
 
 (deftest should-build-properties-with-ssl
   (let [props (build-properties {:host "acme.com" :port "1234" :user "Wiley" :ssl true})]
     (is (= "acme.com" (.get props "mail.smtp.host")))
     (is (= "1234" (.get props "mail.smtp.port")))
     (is (= "Wiley" (.get props "mail.smtp.user")))
-    (is (= "1234" (.get props "mail.smtp.socketFactory.port")))
+    (is (= nil (.get props "mail.smtp.socketFactory.port")))
     (is (= "true" (.get props "mail.smtp.auth")))
     (is (= "true" (.get props "mail.smtp.starttls.enable")))
     (is (= "javax.net.ssl.SSLSocketFactory" (.get props "mail.smtp.socketFactory.class")))
